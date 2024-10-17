@@ -38,7 +38,7 @@ input{
 .button{
 
     color:black ;
-    background-color:orange ;
+    background: rgba(255, 255, 255, 0.75); 
     width: 20%;
     height: 40px;
     border-radius: 5px;    
@@ -51,7 +51,7 @@ input{
 }
 
 .button:hover{
-    background-color: darkorange;
+    background-color: lightskyblue;
     color: white;
     
 }
