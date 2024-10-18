@@ -34,19 +34,9 @@ body::before {
     z-index: 1; 
 }
 
-@keyframes rainbow {
-    0% { color: red; }
-    14% { color: orange; }
-    28% { color: yellow; }
-    42% { color: green; }
-    57% { color: blue; }
-    71% { color: indigo; }
-    85% { color: violet; }
-    100% { color: red; }
-}
-
 .principal, h1 {
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 input {
