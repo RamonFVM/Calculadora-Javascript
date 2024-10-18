@@ -4,27 +4,52 @@ html, body {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    background:linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; 
+    filter: blur(8px); 
+    z-index: 0; 
 }
 
 .principal {
-    background: rgba(255, 255, 255, 0.75); 
+    background: rgba(255, 255, 255, 0.3); 
     backdrop-filter: blur(5.5px); 
-   width: 40%;
-    gap: 1.6rem;
+    width: 90%;
     display: flex;
-    flex-wrap: wrap; 
-    align-content: center; 
+    flex-direction: column; 
     align-items: center;
     justify-content: center; 
-    height: 40%; 
+    height: 50%; 
     padding: 1rem; 
     border-radius: 10px; 
-
-    
+    position: relative; 
+    z-index: 1; 
 }
 
-input{
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+.principal, h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
     border-radius: 10px;
     width: 100%; 
     height: 40px; 
@@ -35,23 +60,35 @@ input{
     padding: 5px; 
 }
 
-.button{
-
-    color:black ;
-    background: rgba(255, 255, 255, 0.75); 
-    width: 20%;
-    height: 40px;
-    border-radius: 5px;    
-    margin: 1px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 1.2rem;
-    transition: 0.2s
-   
+.buttons {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+    width: 100%; 
 }
 
-.button:hover{
+.button, .operator {
+    color: black;
+    background: rgba(255, 255, 255, 0.3); 
+    height: 50px; 
+    border-radius: 5px;    
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem; 
+    transition: 0.1s;
+    width: 100%; 
+}
+
+.button:hover {
     background-color: lightskyblue;
     color: white;
-    
+}
+
+.operator {
+    background: rgba(255, 255, 255, 0.3); 
+}
+
+.operator:hover {
+    background-color: orange;
+    color: white;
 }
